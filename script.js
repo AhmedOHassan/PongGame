@@ -147,10 +147,10 @@ function handleKeyUp(e) {
  */
 function updatePaddle1() {
   // Checking if the player has pressed w, if so then move the paddle in the upward direction and speed it up.
-  if (keysPressed["w"]) {
+  if (keysPressed["w"] || keysPressed["W"]) {
     paddle1Speed = Math.max(paddle1Speed - paddleAcceleration, -maxPaddleSpeed);
   } // Checking if the player has pressed s, if so then move the paddle in the downward direction and speed it up.
-  else if (keysPressed["s"]) {
+  else if (keysPressed["s"] || keysPressed["S"]) {
     paddle1Speed = Math.min(paddle1Speed + paddleAcceleration, maxPaddleSpeed);
   } // Then the player has released the w or s button.
   else {
